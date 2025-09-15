@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+
+    var message = [[${message}]];
+    alert(message); // Controller를 통해 받은 메시지 창을 띄우는 함수
+
+    location.replace([[${searchUrl}]]); // Controller를 통해 받은 Url 경로로 페이지를 이동시켜주는 함수
+
+    /*]]>*/
+</script>
+
+<body>
+
+</body>
+</html>
