@@ -8,8 +8,10 @@
 
 <h1 th:text="${board.title}">제목입니다.</h1>
 <p th:text="${board.content}">내용이 들어갈 부분입니다.</p>
-<a th:href="@{/files/{fn}(fn=${board.filename})}">다운받기</a>
+<a th:href="@{/files/{fn}(fn=${board.filename})}" onclick="return confirm('파일을 다운로드하시겠습니까?');">다운로드</a>
 <a th:href="@{/board/modify/{id}(id = ${board.id})}">수정</a>
-<a th:href="@{/board/delete(id=${board.id})}" onclick="return confirm('정말 삭제하시겠습니까?');">삭제</a>
+<a th:href="@{/board/delete(id=${board.id})}" onclick="return confirm('정말 삭제하시겠습니까?');">삭제<br><br></a>
+<button type="button" onclick="history.back()">이전</button>
+<a th:href="@{/board/list}">목록</a>
 </body>
 </html>
