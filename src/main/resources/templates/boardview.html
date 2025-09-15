@@ -10,6 +10,6 @@
 <p th:text="${board.content}">내용이 들어갈 부분입니다.</p>
 <a th:href="@{/files/{fn}(fn=${board.filename})}">다운받기</a>
 <a th:href="@{/board/modify/{id}(id = ${board.id})}">수정</a>
-<a th:href="@{/board/delete(id=${board.id})}">삭제</a>
+<a th:href="@{/board/delete(id=${board.id})}" onclick="return confirm('정말 삭제하시겠습니까?');">삭제</a>
 </body>
 </html>
